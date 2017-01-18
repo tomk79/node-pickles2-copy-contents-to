@@ -1,5 +1,5 @@
 {
-    "description": "CSV の入力データを元に、 Pickles 2 コンテンツを移動します。",
+    "description": "CSV の入力データを元に、 Pickles 2 コンテンツを複製します。",
     "license": "MIT",
     "authors": [
         {

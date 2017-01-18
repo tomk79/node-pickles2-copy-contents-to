@@ -1,19 +1,19 @@
 var assert = require('assert');
 var Promise = require("es6-promise").Promise;
 var px2agent = require('px2agent');
-var Px2MoveContentsTo = require('../libs/index.js');
+var Px2CopyContentsTo = require('../libs/index.js');
 
 describe('tests', function() {
 
 	it("test", function(done) {
 		this.timeout(60*1000);
 
-		var px2MoveContentsTo = new Px2MoveContentsTo({
+		var px2CopyContentsTo = new Px2CopyContentsTo({
 			'entryScript': __dirname+'/pickles2/.px_execute.php',
 			'rules': __dirname+'/testdata/input.csv',
-			'dumpTo': __dirname+'/dump_to/'
+			'copyTo': __dirname+'/copy_to/'
 		});
-		px2MoveContentsTo.run(function(result){
+		px2CopyContentsTo.run(function(result){
 			// console.log('done');
 			done();
 		});

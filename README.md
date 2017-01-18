@@ -1,18 +1,18 @@
-# pickles2-move-contents-to
+# pickles2-copy-contents-to
 
-CSV の入力データを元に、 Pickles 2 コンテンツを移動します。
+CSV の入力データを元に、 Pickles 2 コンテンツを複製します。
 
 
 ## 使い方 - Usage
 
 ```js
-var Px2MoveContentsTo = require('pickles2-move-contents-to');
-var px2MoveContentsTo = new Px2MoveContentsTo({
+var Px2CopyContentsTo = require('pickles2-copy-contents-to');
+var px2CopyContentsTo = new Px2CopyContentsTo({
 	'entryScript': '/path/to/pickles2/.px_execute.php',
 	'rules': '/path/to/input.csv',
-	'dumpTo': '/path/to/dumpToDirectory/'
+	'copyTo': '/path/to/copyToDirectory/'
 });
-px2MoveContentsTo.run(function(result){
+px2CopyContentsTo.run(function(result){
 	console.log('done!');
 });
 ```
@@ -20,7 +20,7 @@ px2MoveContentsTo.run(function(result){
 or
 
 ```js
-px2MoveContentsTo.dryrun(function(result){
+px2CopyContentsTo.dryrun(function(result){
 	console.log('done!');
 });
 ```

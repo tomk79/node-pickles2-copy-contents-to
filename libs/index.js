@@ -1,5 +1,5 @@
 /**
- * pickles2-move-contents-to.js
+ * pickles2-copy-contents-to.js
  */
 module.exports = function(options){
 	var Promise = require("es6-promise").Promise;
@@ -124,14 +124,14 @@ module.exports = function(options){
 							row[1] = row[0];
 						}
 
-						copyFile( require('path').resolve(px2conf.realpath_controot+row[0]), require('path').resolve(options.dumpTo+row[1]), isDryrun, function(){
+						copyFile( require('path').resolve(px2conf.realpath_controot+row[0]), require('path').resolve(options.copyTo+row[1]), isDryrun, function(){
 
 							// リソースディレクトリを移動
 							px2proj.path_files(row[0], '', function(beforeFiles){
 								// console.log(beforeFiles);
 								px2proj.path_files(row[1], '', function(afterFiles){
 									// console.log(afterFiles);
-									copyDir(require('path').resolve(px2conf.realpath_controot+beforeFiles)+'/', require('path').resolve(options.dumpTo+afterFiles)+'/', isDryrun, function(){
+									copyDir(require('path').resolve(px2conf.realpath_controot+beforeFiles)+'/', require('path').resolve(options.copyTo+afterFiles)+'/', isDryrun, function(){
 										it1.next();
 									});
 								});
