@@ -1,0 +1,18 @@
+{
+  "name": "node-pickles2-move-contents-to",
+  "version": "0.1.0",
+  "description": "CSV の入力データを元に、 Pickles 2 コンテンツを移動します。",
+  "main": "libs/index.js",
+  "scripts": {
+    "test": "mocha --ui tdd ./tests/"
+  },
+  "author": "Tomoya Koyanagi",
+  "license": "MIT",
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "px2agent": "^2.0.4"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
