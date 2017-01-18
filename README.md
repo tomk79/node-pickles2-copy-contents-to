@@ -3,6 +3,12 @@
 CSV の入力データを元に、 Pickles 2 コンテンツを複製します。
 
 
+## インストール - Install
+
+```
+$ npm install pickles2-copy-contents-to --save
+```
+
 ## 使い方 - Usage
 
 ```js
